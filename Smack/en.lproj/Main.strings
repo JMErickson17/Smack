@@ -1,0 +1,30 @@
+
+/* Class = "UILabel"; text = "Smack"; ObjectID = "7WK-UP-zbW"; */
+"7WK-UP-zbW.text" = "Smack";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "GRS-Ke-vSj"; */
+"GRS-Ke-vSj.normalTitle" = "Login";
+
+/* Class = "UILabel"; text = "Smack"; ObjectID = "TzI-no-Ucv"; */
+"TzI-no-Ucv.text" = "Smack";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "Wb8-ek-qkf"; */
+"Wb8-ek-qkf.placeholder" = "Password";
+
+/* Class = "UILabel"; text = "Smack"; ObjectID = "Y8s-Vu-WPG"; */
+"Y8s-Vu-WPG.text" = "Smack";
+
+/* Class = "UITextField"; placeholder = "Username"; ObjectID = "Zb7-zV-JmZ"; */
+"Zb7-zV-JmZ.placeholder" = "Username";
+
+/* Class = "UILabel"; text = "Channels"; ObjectID = "i1f-nJ-qSY"; */
+"i1f-nJ-qSY.text" = "Channels";
+
+/* Class = "UIButton"; normalTitle = "Don't have an account? Sign up here"; ObjectID = "kV0-vd-k3s"; */
+"kV0-vd-k3s.normalTitle" = "Don't have an account? Sign up here";
+
+/* Class = "UILabel"; text = "#general"; ObjectID = "o5V-HX-Uwk"; */
+"o5V-HX-Uwk.text" = "#general";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "rAN-FW-ov3"; */
+"rAN-FW-ov3.normalTitle" = "Button";
