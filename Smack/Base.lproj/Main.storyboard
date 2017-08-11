@@ -370,14 +370,14 @@
                                             <constraint firstAttribute="height" constant="2" id="u91-8x-PcH"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dZd-9F-t1J">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4lK-7m-qMQ">
                                         <rect key="frame" x="0.0" y="50" width="250" height="20"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="250" id="W5P-zz-k6a"/>
+                                            <constraint firstAttribute="width" constant="250" id="wyd-4e-YZi"/>
                                         </constraints>
                                         <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X16-oh-XRV">
                                         <rect key="frame" x="0.0" y="84" width="250" height="2"/>
@@ -387,14 +387,14 @@
                                             <constraint firstAttribute="height" constant="2" id="tMj-KP-jxY"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4lK-7m-qMQ">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dZd-9F-t1J">
                                         <rect key="frame" x="0.0" y="100" width="250" height="20"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="250" id="wyd-4e-YZi"/>
+                                            <constraint firstAttribute="width" constant="250" id="W5P-zz-k6a"/>
                                         </constraints>
                                         <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IBX-8t-hU1">
                                         <rect key="frame" x="0.0" y="134" width="250" height="2"/>
