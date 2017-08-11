@@ -13,6 +13,7 @@
 		CA7760111F3E24AA00E4E3B6 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7760101F3E24AA00E4E3B6 /* CreateAccountVC.swift */; };
 		CA7760141F3E4BCC00E4E3B6 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7760131F3E4BCC00E4E3B6 /* AuthService.swift */; };
 		CA7760161F3E675900E4E3B6 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7760151F3E675900E4E3B6 /* RoundedButton.swift */; };
+		CA7760181F3E711D00E4E3B6 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7760171F3E711D00E4E3B6 /* UserDataService.swift */; };
 		CA8654DD1F3CCF21003B47D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8654DC1F3CCF21003B47D4 /* AppDelegate.swift */; };
 		CA8654E21F3CCF21003B47D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA8654E01F3CCF21003B47D4 /* Main.storyboard */; };
 		CA8654E41F3CCF21003B47D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA8654E31F3CCF21003B47D4 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 		CA7760101F3E24AA00E4E3B6 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		CA7760131F3E4BCC00E4E3B6 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		CA7760151F3E675900E4E3B6 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		CA7760171F3E711D00E4E3B6 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		CA8654D91F3CCF21003B47D4 /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA8654DC1F3CCF21003B47D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA8654E11F3CCF21003B47D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				CA7760131F3E4BCC00E4E3B6 /* AuthService.swift */,
+				CA7760171F3E711D00E4E3B6 /* UserDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				CA8654F81F3D1599003B47D4 /* ChatVC.swift in Sources */,
 				CA7760161F3E675900E4E3B6 /* RoundedButton.swift in Sources */,
 				CA8654FA1F3D15AB003B47D4 /* ChannelVC.swift in Sources */,
+				CA7760181F3E711D00E4E3B6 /* UserDataService.swift in Sources */,
 				CA7760111F3E24AA00E4E3B6 /* CreateAccountVC.swift in Sources */,
 				CA7760141F3E4BCC00E4E3B6 /* AuthService.swift in Sources */,
 				CA77600F1F3E22A800E4E3B6 /* LoginVC.swift in Sources */,
