@@ -11,6 +11,7 @@
 		CA30AF101F3E1C4A00DE25CA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA30AF0F1F3E1C4A00DE25CA /* Constants.swift */; };
 		CA77600F1F3E22A800E4E3B6 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA77600E1F3E22A800E4E3B6 /* LoginVC.swift */; };
 		CA7760111F3E24AA00E4E3B6 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7760101F3E24AA00E4E3B6 /* CreateAccountVC.swift */; };
+		CA7760141F3E4BCC00E4E3B6 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7760131F3E4BCC00E4E3B6 /* AuthService.swift */; };
 		CA8654DD1F3CCF21003B47D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8654DC1F3CCF21003B47D4 /* AppDelegate.swift */; };
 		CA8654E21F3CCF21003B47D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA8654E01F3CCF21003B47D4 /* Main.storyboard */; };
 		CA8654E41F3CCF21003B47D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA8654E31F3CCF21003B47D4 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 		CA30AF0F1F3E1C4A00DE25CA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CA77600E1F3E22A800E4E3B6 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		CA7760101F3E24AA00E4E3B6 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		CA7760131F3E4BCC00E4E3B6 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		CA8654D91F3CCF21003B47D4 /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA8654DC1F3CCF21003B47D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA8654E11F3CCF21003B47D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,6 +74,14 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		CA7760121F3E4BA700E4E3B6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CA7760131F3E4BCC00E4E3B6 /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		CA8654D01F3CCF21003B47D4 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +104,7 @@
 		CA8654DB1F3CCF21003B47D4 /* Smack */ = {
 			isa = PBXGroup;
 			children = (
+				CA7760121F3E4BA700E4E3B6 /* Services */,
 				CA30AF0E1F3E1C3500DE25CA /* Utilities */,
 				CA8654FB1F3D1959003B47D4 /* Supporting Files */,
 				CA8654F61F3D1583003B47D4 /* Model */,
@@ -290,6 +301,7 @@
 				CA8654F81F3D1599003B47D4 /* ChatVC.swift in Sources */,
 				CA8654FA1F3D15AB003B47D4 /* ChannelVC.swift in Sources */,
 				CA7760111F3E24AA00E4E3B6 /* CreateAccountVC.swift in Sources */,
+				CA7760141F3E4BCC00E4E3B6 /* AuthService.swift in Sources */,
 				CA77600F1F3E22A800E4E3B6 /* LoginVC.swift in Sources */,
 				CA8655051F3D1FDE003B47D4 /* GradientView.swift in Sources */,
 				CA8654DD1F3CCF21003B47D4 /* AppDelegate.swift in Sources */,
