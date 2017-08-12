@@ -20,6 +20,7 @@ let TO_AVATAR_PICKER = "toAvatarPicker"
 /* -------------------- Cells -------------------- */
 
 let AVATAR_CELL = "avatarCell"
+let NUMBER_OF_AVATARS = 28
 
 /* -------------------- User Defaults -------------------- */
 

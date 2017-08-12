@@ -23,6 +23,13 @@ class CreateAccountVC: UIViewController {
 
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if UserDataService.instance.avatarName != "" {
+            userImage.image = UIImage(named: UserDataService.instance.avatarName)
+            avatarName = UserDataService.instance.avatarName
+        }
+    }
+    
     @IBAction func createAccountTapped(_ sender: Any) {
         guard let email = emailTextField.text, emailTextField.text != "" else { return }
         guard let username = usernameTextField.text, usernameTextField.text != "" else { return }
