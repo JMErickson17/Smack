@@ -14,7 +14,6 @@ import SwiftyJSON
 class AuthService {
     
     static let instance = AuthService()
-    
     let defaults = UserDefaults.standard
     
     var isLoggedIn: Bool {
