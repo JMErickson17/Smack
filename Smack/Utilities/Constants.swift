@@ -28,6 +28,14 @@ let TOKEN_KEY = "token"
 let LOGGED_IN_KEY = "loggedIn"
 let USER_EMAIL = "userEmail"
 
+/* -------------------- Colors -------------------- */
+
+let smackPurplePlaceholder = #colorLiteral(red: 0.3976354599, green: 0.5083267093, blue: 0.8185241222, alpha: 0.5)
+
+/* -------------------- Notifications -------------------- */
+
+let NOTIF_USER_DATA_DID_CHANGE = Notification.Name("notifUserDataChanged")
+
 /* -------------------- URLs -------------------- */
 
 let BASE_URL = "https://ios-chat-api.herokuapp.com/v1/"
