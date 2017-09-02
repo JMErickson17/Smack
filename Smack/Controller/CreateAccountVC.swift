@@ -10,11 +10,15 @@ import UIKit
 
 class CreateAccountVC: UIViewController {
 
+    //MARK: @IBOutlets
+    
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var activitySpinner: UIActivityIndicatorView!
+    
+    // MARK: Properties
     
     var avatarName = "profileDefault"
     var avatarColor = "[0.5, 0.5, 0.5, 1]"
@@ -25,6 +29,8 @@ class CreateAccountVC: UIViewController {
         
         setupView()
     }
+    
+    // MARK: View Setup
     
     override func viewDidAppear(_ animated: Bool) {
         if UserDataService.instance.avatarName != "" {
@@ -50,6 +56,8 @@ class CreateAccountVC: UIViewController {
         view.endEditing(true)
     }
     
+    // MARK: @IBActions
+    
     @IBAction func createAccountTapped(_ sender: Any) {
         activitySpinner.isHidden = false
         activitySpinner.startAnimating()
@@ -57,22 +65,7 @@ class CreateAccountVC: UIViewController {
         guard let username = usernameTextField.text, usernameTextField.text != "" else { return }
         guard let password = passwordTextField.text, passwordTextField.text != "" else { return }
         
-        AuthService.instance.registerUser(email: email, password: password) { (success) in
-            if success {
-                AuthService.instance.loginUser(email: email, password: password, completion: { (success) in
-                    if success {
-                        AuthService.instance.createUser(name: username, email: email, avatarName: self.avatarName, avatarColor: self.avatarColor, completion: { (success) in
-                            if success {
-                                self.activitySpinner.isHidden = true
-                                self.activitySpinner.stopAnimating()
-                                self.performSegue(withIdentifier: UNWIND, sender: nil)
-                                NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
-                            }
-                        })
-                    }
-                })
-            }
-        }
+        createNewUserAccount(email, password, username)
     }
     
     @IBAction func pickAvatarTapped(_ sender: Any) {
@@ -89,10 +82,30 @@ class CreateAccountVC: UIViewController {
         UIView.animate(withDuration: 0.2) {
             self.userImage.backgroundColor = self.bgColor
         }
-        
     }
     
     @IBAction func exitButtonTapped(_ sender: Any) {
         performSegue(withIdentifier: UNWIND, sender: nil)
+    }
+    
+    // MARK: Methods
+
+    func createNewUserAccount(_ email: String, _ password: String, _ username: String) {
+        AuthService.instance.registerUser(email: email, password: password) { (success) in
+            if success {
+                AuthService.instance.loginUser(email: email, password: password, completion: { (success) in
+                    if success {
+                        AuthService.instance.createUser(name: username, email: email, avatarName: self.avatarName, avatarColor: self.avatarColor, completion: { (success) in
+                            if success {
+                                self.activitySpinner.isHidden = true
+                                self.activitySpinner.stopAnimating()
+                                self.performSegue(withIdentifier: UNWIND, sender: nil)
+                                NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
+                            }
+                        })
+                    }
+                })
+            }
+        }
     }
 }

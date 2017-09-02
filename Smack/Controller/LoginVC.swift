@@ -20,11 +20,15 @@ class LoginVC: UIViewController {
         setUpView()
     }
     
+    //MARK: View Setup
+    
     func setUpView() {
         activitySpinner.isHidden = true
-        emailTextField.attributedPlaceholder = NSAttributedString(string: "Username", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlaceholder])
+        emailTextField.attributedPlaceholder = NSAttributedString(string: "Email", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlaceholder])
         passwordTextField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlaceholder])
     }
+    
+    //MARK: @IBActions
     
     @IBAction func loginButtonTapped(_ sender: Any) {
         activitySpinner.isHidden = false

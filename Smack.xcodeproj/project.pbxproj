@@ -33,6 +33,7 @@
 		CA8654FA1F3D15AB003B47D4 /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8654F91F3D15AB003B47D4 /* ChannelVC.swift */; };
 		CA8655031F3D1CFA003B47D4 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8654FF1F3D19E2003B47D4 /* SWRevealViewController.m */; };
 		CA8655051F3D1FDE003B47D4 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8655041F3D1FDE003B47D4 /* GradientView.swift */; };
+		CA89E1DE1F5B3B200070045A /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA89E1DD1F5B3B200070045A /* SocketService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		CA8655001F3D19E2003B47D4 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		CA8655021F3D1B16003B47D4 /* Smack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Smack-Bridging-Header.h"; sourceTree = "<group>"; };
 		CA8655041F3D1FDE003B47D4 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		CA89E1DD1F5B3B200070045A /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				CA7760131F3E4BCC00E4E3B6 /* AuthService.swift */,
 				CA7760171F3E711D00E4E3B6 /* UserDataService.swift */,
 				CA45C03A1F5B0DAF008668F2 /* MessageService.swift */,
+				CA89E1DD1F5B3B200070045A /* SocketService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA89E1DE1F5B3B200070045A /* SocketService.swift in Sources */,
 				CA0B501C1F3F8C2C0086A51A /* ProfileVC.swift in Sources */,
 				CA45C03F1F5B1BAA008668F2 /* ChannelCell.swift in Sources */,
 				CA8654F81F3D1599003B47D4 /* ChatVC.swift in Sources */,

@@ -10,6 +10,7 @@ import UIKit
 
 class AddChannelVC: UIViewController {
 
+    // MARK: @IBOutlets
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var backgroundView: UIView!
@@ -20,6 +21,7 @@ class AddChannelVC: UIViewController {
         setupView()
     }
     
+    // MARK: View Setup
     func setupView() {
         let closeTouch = UITapGestureRecognizer(target: self, action: #selector(AddChannelVC.closeTap(_:)))
         backgroundView.addGestureRecognizer(closeTouch)
@@ -33,8 +35,15 @@ class AddChannelVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    // MARK: @IBActions
     @IBAction func createChannelTapped(_ sender: Any) {
-        
+        guard let channelName = nameTextField.text, nameTextField.text != "" else { return }
+        guard let description = descriptionTextField.text else { return }
+        SocketService.instance.addChannel(name: channelName, description: description) { (success) in
+            if success {
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
     }
     
     @IBAction func closeModalTapped(_ sender: Any) {

@@ -16,6 +16,7 @@ class AuthService {
     static let instance = AuthService()
     let defaults = UserDefaults.standard
     
+    // MARK: User Defaults
     var isLoggedIn: Bool {
         get {
             return defaults.bool(forKey: LOGGED_IN_KEY)
@@ -42,6 +43,8 @@ class AuthService {
             defaults.set(newValue, forKey: USER_EMAIL)
         }
     }
+    
+    //MARK: Methods
     
     func registerUser(email: String, password: String, completion: @escaping CompletionHandler) {
         let lowercaseEmail = email.lowercased()

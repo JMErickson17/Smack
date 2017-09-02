@@ -10,6 +10,7 @@ import UIKit
 
 class ProfileVC: UIViewController {
 
+    // MARK: @IBOutlets
     @IBOutlet weak var avatarImage: UIImageView!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userEmail: UILabel!
@@ -21,6 +22,7 @@ class ProfileVC: UIViewController {
         setupView()
     }
     
+    // MARK: View Setup
     func setupView() {
         let user = UserDataService.instance
         
@@ -36,6 +38,8 @@ class ProfileVC: UIViewController {
     @objc func closeModal() {
         dismiss(animated: true, completion: nil)
     }
+    
+    // MARK: @IBActions
     
     @IBAction func closeModalTapped(_ sender: Any) {
         closeModal()

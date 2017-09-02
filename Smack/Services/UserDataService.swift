@@ -9,13 +9,18 @@
 import Foundation
 
 class UserDataService {
+    
     static let instance = UserDataService()
+    
+    // MARK: User properties
     
     private(set) public var id = ""
     private(set) public var avatarColor = ""
     private(set) public var avatarName = ""
     private(set) public var email = ""
     private(set) public var name = ""
+    
+    // MARK: Methods
     
     func setUserData(id: String, avatarColor: String, avatarName: String, email: String, name: String) {
         self.id = id
@@ -34,12 +39,14 @@ class UserDataService {
         AuthService.instance.isLoggedIn = false
         AuthService.instance.userEmail = ""
         AuthService.instance.authToken = ""
+        MessageService.instance.clearChannels()
     }
     
     func setAvatarName(avatarName: String) {
         self.avatarName = avatarName
     }
     
+    // Parse color string and return UIColor
     func returnUIColor(components: String) -> UIColor {
         var red, green, blue, alpha: NSString?
         let defaultColor = UIColor.lightGray
