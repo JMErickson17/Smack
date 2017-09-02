@@ -253,7 +253,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="bKP-HW-e44" userLabel="Input Stack View">
                                 <rect key="frame" x="62.5" y="160" width="250" height="86"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zb7-zV-JmZ">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zb7-zV-JmZ">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="K8z-lj-LAQ"/>
@@ -300,7 +300,14 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="y6g-cR-Uxp" eventType="touchUpInside" id="yTt-Hv-xV6"/>
+                                </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="QlR-Nq-qIZ">
+                                <rect key="frame" x="168.5" y="215" width="37" height="37"/>
+                                <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -313,11 +320,16 @@
                             <constraint firstItem="ISw-TU-Ll4" firstAttribute="trailing" secondItem="h3b-mf-kLA" secondAttribute="trailing" constant="16" id="Lg8-fT-G4z"/>
                             <constraint firstItem="rAN-FW-ov3" firstAttribute="top" secondItem="bKP-HW-e44" secondAttribute="bottom" constant="40" id="MJV-V1-aAF"/>
                             <constraint firstItem="rAN-FW-ov3" firstAttribute="centerX" secondItem="dhU-OT-4Lz" secondAttribute="centerX" id="YqW-fR-aiG"/>
+                            <constraint firstItem="QlR-Nq-qIZ" firstAttribute="centerY" secondItem="dhU-OT-4Lz" secondAttribute="centerY" constant="-100" id="eiR-vF-sVo"/>
+                            <constraint firstItem="QlR-Nq-qIZ" firstAttribute="centerX" secondItem="dhU-OT-4Lz" secondAttribute="centerX" id="xVk-BR-GcM"/>
                             <constraint firstItem="bKP-HW-e44" firstAttribute="centerX" secondItem="dhU-OT-4Lz" secondAttribute="centerX" id="y1Z-Sc-8py"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ISw-TU-Ll4"/>
                     </view>
                     <connections>
+                        <outlet property="activitySpinner" destination="QlR-Nq-qIZ" id="r9f-8T-Vf1"/>
+                        <outlet property="emailTextField" destination="Zb7-zV-JmZ" id="Fe3-5f-jWU"/>
+                        <outlet property="passwordTextField" destination="Wb8-ek-qkf" id="wo3-0p-yIe"/>
                         <segue destination="w1s-Uw-M3s" kind="show" identifier="toCreateAccount" id="eT6-db-mJ6"/>
                     </connections>
                 </viewController>
