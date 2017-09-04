@@ -10,7 +10,8 @@ import UIKit
 
 class AvatarPickerVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
-    // MARK: @IBOutlets
+    // MARK: Properties
+    
     @IBOutlet weak var avatarCollectionView: UICollectionView!
     @IBOutlet weak var segmentControl: UISegmentedControl!
     
@@ -24,6 +25,7 @@ class AvatarPickerVC: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     // MARK: Collection View Methods
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AVATAR_CELL, for: indexPath) as? AvatarCell {
             cell.configureCell(index: indexPath.item, type: avatarType)
@@ -58,7 +60,8 @@ class AvatarPickerVC: UIViewController, UICollectionViewDelegate, UICollectionVi
         return CGSize(width: cellDimension, height: cellDimension)
     }
     
-    // MARK: @IBActions
+    // MARK: Actions
+    
     @IBAction func segmentControlChanged(_ sender: Any) {
         if segmentControl.selectedSegmentIndex == 0 {
             avatarType = .dark

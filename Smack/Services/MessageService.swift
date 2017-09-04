@@ -17,6 +17,7 @@ class MessageService {
     // MARK: Channel Properties
     
     var channels = [Channel]()
+    var unreadChannels = [String]()
     var messages = [Message]()
     var selectedChannel: Channel?
     
@@ -26,6 +27,10 @@ class MessageService {
     
     var hasMessages: Bool {
         return !messages.isEmpty
+    }
+    
+    var hasUnreadChannels: Bool {
+        return !unreadChannels.isEmpty
     }
     
     // MARK: Methods

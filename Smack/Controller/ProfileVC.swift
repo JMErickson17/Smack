@@ -10,7 +10,8 @@ import UIKit
 
 class ProfileVC: UIViewController {
 
-    // MARK: @IBOutlets
+    // MARK: Properties
+    
     @IBOutlet weak var avatarImage: UIImageView!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userEmail: UILabel!
@@ -23,6 +24,7 @@ class ProfileVC: UIViewController {
     }
     
     // MARK: View Setup
+    
     func setupView() {
         let user = UserDataService.instance
         

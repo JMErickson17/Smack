@@ -10,7 +10,8 @@ import UIKit
 
 class AddChannelVC: UIViewController {
 
-    // MARK: @IBOutlets
+    // MARK: Properties
+    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var backgroundView: UIView!
@@ -22,6 +23,7 @@ class AddChannelVC: UIViewController {
     }
     
     // MARK: View Setup
+    
     func setupView() {
         let closeTouch = UITapGestureRecognizer(target: self, action: #selector(AddChannelVC.closeTap(_:)))
         backgroundView.addGestureRecognizer(closeTouch)
@@ -35,7 +37,8 @@ class AddChannelVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    // MARK: @IBActions
+    // MARK: Actions
+    
     @IBAction func createChannelTapped(_ sender: Any) {
         guard let channelName = nameTextField.text, nameTextField.text != "" else { return }
         guard let description = descriptionTextField.text else { return }

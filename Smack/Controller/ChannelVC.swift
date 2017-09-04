@@ -10,7 +10,7 @@ import UIKit
 
 class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    // MARK: @IBOutlets
+    // MARK: Properties
     
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var userAvatarImage: CircleImage!
@@ -29,6 +29,14 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         // Gets channels from server and reloads the data in tableView
         SocketService.instance.getChannel { (success) in
             if success {
+                self.tableView.reloadData()
+            }
+        }
+        
+        // Listens for new messages in non-current channels and adds channelId to unreadChannels array
+        SocketService.instance.getChatMessage { (newMessage) in
+            if newMessage.channelId != MessageService.instance.selectedChannel?.id && AuthService.instance.isLoggedIn {
+                MessageService.instance.unreadChannels.append(newMessage.channelId)
                 self.tableView.reloadData()
             }
         }
@@ -75,6 +83,15 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let channel = MessageService.instance.channels[indexPath.row]
         MessageService.instance.selectedChannel = channel
+        
+        if MessageService.instance.hasUnreadChannels {
+            MessageService.instance.unreadChannels = MessageService.instance.unreadChannels.filter{ $0 != channel.id }
+        }
+        let index = IndexPath(row: indexPath.row, section: 0)
+        tableView.reloadRows(at: [index], with: .none)
+        tableView.selectRow(at: index, animated: false, scrollPosition: .none)
+        
+        
         NotificationCenter.default.post(name: NOTIF_CHANNEL_SELECTED, object: nil)
         
         self.revealViewController().revealToggle(animated: true)

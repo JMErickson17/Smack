@@ -9,7 +9,6 @@
 import Foundation
 
 struct Message {
-    
     public private(set) var message: String!
     public private(set) var userName: String!
     public private(set) var channelId: String!
