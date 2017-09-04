@@ -14,9 +14,14 @@ class ChatVC: UIViewController {
     
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var channelNameLabel: UILabel!
+    @IBOutlet weak var messageTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.bindToKeyboard()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(ChatVC.handleTap))
+        view.addGestureRecognizer(tap)
         
         menuButton.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
         
@@ -33,6 +38,23 @@ class ChatVC: UIViewController {
         }
     }
     
+    // MARK: Actions
+    
+    @IBAction func sendMessageTapped(_ sender: Any) {
+        if AuthService.instance.isLoggedIn {
+            guard let channelId = MessageService.instance.selectedChannel?.id else { return }
+            guard let message = messageTextField.text else { return }
+            
+            SocketService.instance.addMessage(messageBody: message, userId: UserDataService.instance.id, channelId: channelId, completion: { (success) in
+                if success {
+                    self.messageTextField.text = ""
+                    self.messageTextField.resignFirstResponder()
+                }
+            })
+        }
+    }
+    
+    
     // MARK: Methods
 
     @objc func userDataDidChange(_ notif: Notification) {
@@ -47,16 +69,34 @@ class ChatVC: UIViewController {
         updateWithChannel()
     }
     
+    @objc func handleTap() {
+        view.endEditing(true)
+    }
+    
     func updateWithChannel() {
         let channelName = MessageService.instance.selectedChannel?.name ?? ""
         channelNameLabel.text = "#\(channelName)"
+        getMessages()
     }
     
     func onLoginGetMessages() {
         MessageService.instance.findAllChannels { (success) in
             if success {
-                // Do stuff with channels
+                if MessageService.instance.hasChannels {
+                    MessageService.instance.selectedChannel = MessageService.instance.channels.first
+                    self.updateWithChannel()
+                } else {
+                    self.channelNameLabel.text = "No Channels Yet!"
+                }
             }
+        }
+    }
+    
+    func getMessages() {
+        guard let channelId = MessageService.instance.selectedChannel?.id else { return }
+        
+        MessageService.instance.getAllMessagesForChannel(channelId: channelId) { (success) in
+            
         }
     }
 }

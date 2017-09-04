@@ -34,6 +34,8 @@
 		CA8655031F3D1CFA003B47D4 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8654FF1F3D19E2003B47D4 /* SWRevealViewController.m */; };
 		CA8655051F3D1FDE003B47D4 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8655041F3D1FDE003B47D4 /* GradientView.swift */; };
 		CA89E1DE1F5B3B200070045A /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA89E1DD1F5B3B200070045A /* SocketService.swift */; };
+		CAD76CCE1F5DB8ED00E2A2E9 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD76CCD1F5DB8ED00E2A2E9 /* Message.swift */; };
+		CAD76CD01F5DCEF500E2A2E9 /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD76CCF1F5DCEF400E2A2E9 /* KeyboardBoundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +72,8 @@
 		CA8655021F3D1B16003B47D4 /* Smack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Smack-Bridging-Header.h"; sourceTree = "<group>"; };
 		CA8655041F3D1FDE003B47D4 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		CA89E1DD1F5B3B200070045A /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
+		CAD76CCD1F5DB8ED00E2A2E9 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		CAD76CCF1F5DCEF400E2A2E9 /* KeyboardBoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +184,7 @@
 				CA0B50161F3F636C0086A51A /* AvatarCell.swift */,
 				CA0B50181F3F705C0086A51A /* CircleImage.swift */,
 				CA45C03E1F5B1BAA008668F2 /* ChannelCell.swift */,
+				CAD76CCF1F5DCEF400E2A2E9 /* KeyboardBoundView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -188,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				CA45C03C1F5B0DF4008668F2 /* Channel.swift */,
+				CAD76CCD1F5DB8ED00E2A2E9 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -347,12 +353,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAD76CD01F5DCEF500E2A2E9 /* KeyboardBoundView.swift in Sources */,
 				CA89E1DE1F5B3B200070045A /* SocketService.swift in Sources */,
 				CA0B501C1F3F8C2C0086A51A /* ProfileVC.swift in Sources */,
 				CA45C03F1F5B1BAA008668F2 /* ChannelCell.swift in Sources */,
 				CA8654F81F3D1599003B47D4 /* ChatVC.swift in Sources */,
 				CA0B50151F3F618F0086A51A /* AvatarPickerVC.swift in Sources */,
 				CA7760161F3E675900E4E3B6 /* RoundedButton.swift in Sources */,
+				CAD76CCE1F5DB8ED00E2A2E9 /* Message.swift in Sources */,
 				CA45C03D1F5B0DF4008668F2 /* Channel.swift in Sources */,
 				CA0B50191F3F705C0086A51A /* CircleImage.swift in Sources */,
 				CA45C03B1F5B0DAF008668F2 /* MessageService.swift in Sources */,
