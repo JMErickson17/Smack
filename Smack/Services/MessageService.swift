@@ -24,6 +24,10 @@ class MessageService {
         return !channels.isEmpty
     }
     
+    var hasMessages: Bool {
+        return !messages.isEmpty
+    }
+    
     // MARK: Methods
     
     func findAllChannels(completion: @escaping CompletionHandler) {
