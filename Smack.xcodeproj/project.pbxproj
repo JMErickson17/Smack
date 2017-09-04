@@ -36,6 +36,7 @@
 		CA89E1DE1F5B3B200070045A /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA89E1DD1F5B3B200070045A /* SocketService.swift */; };
 		CAD76CCE1F5DB8ED00E2A2E9 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD76CCD1F5DB8ED00E2A2E9 /* Message.swift */; };
 		CAD76CD01F5DCEF500E2A2E9 /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD76CCF1F5DCEF400E2A2E9 /* KeyboardBoundView.swift */; };
+		CAD76CD21F5DD68100E2A2E9 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD76CD11F5DD68100E2A2E9 /* MessageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		CA89E1DD1F5B3B200070045A /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		CAD76CCD1F5DB8ED00E2A2E9 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		CAD76CCF1F5DCEF400E2A2E9 /* KeyboardBoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
+		CAD76CD11F5DD68100E2A2E9 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 				CA0B50181F3F705C0086A51A /* CircleImage.swift */,
 				CA45C03E1F5B1BAA008668F2 /* ChannelCell.swift */,
 				CAD76CCF1F5DCEF400E2A2E9 /* KeyboardBoundView.swift */,
+				CAD76CD11F5DD68100E2A2E9 /* MessageCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				CA45C03F1F5B1BAA008668F2 /* ChannelCell.swift in Sources */,
 				CA8654F81F3D1599003B47D4 /* ChatVC.swift in Sources */,
 				CA0B50151F3F618F0086A51A /* AvatarPickerVC.swift in Sources */,
+				CAD76CD21F5DD68100E2A2E9 /* MessageCell.swift in Sources */,
 				CA7760161F3E675900E4E3B6 /* RoundedButton.swift in Sources */,
 				CAD76CCE1F5DB8ED00E2A2E9 /* Message.swift in Sources */,
 				CA45C03D1F5B0DF4008668F2 /* Channel.swift in Sources */,
